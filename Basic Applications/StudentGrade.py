@@ -47,12 +47,13 @@ class Student:
 		self.points['D+'] = 1.3
 		self.points['D'] = 1.0
 		self.quaPoints = 0
+	#this will assign each of the string to each value of the grades
 		for (k,v) in self.grades.items():
 			self.quaPoints = self.quaPoints + (self.points[k]*v)
 		return self.quaPoints
-		
+	#this for loop will add the quality points to the points which store key and value and add it back to the quality points
 	def getGPA(self):	
-	
+	#this will get the grade points average
 		try:			
 			self.GPA = self.getQPoints()/(self.getHours())
 		except:
@@ -62,7 +63,7 @@ class Student:
 	def __str__(self):
         
 		return self.surname + "," + self.name + ":" + str(self.grades.items()) + ";" + "GPA:" + str(self.getGPA())
-
+#this is the list of the current students that have been made by me, which will be stored into the innit class.
 stud1 = Student("Tim", "Blake")
 stud2 = Student("Mary", "Watson")
 
